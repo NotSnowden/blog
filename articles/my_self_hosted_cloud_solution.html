@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Mattia Vezzola</title>
+        <link rel="icon" type="image/x-icon" href="../media/logo.png">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="articles_style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="title-wrapper">
+                    <img class="logo" src="../media/logo.png">
+                    <div class="text">
+                        <h1><a href="../index.html">MATTIA VEZZOLA</a></h1><br>
+                        <p>Sysadmin wannabe and GNU/Linux enthusiast</p>
+                    </div>
+                </div>
+            
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="welcome.html">ABOUT</a></li>
+                    <li><a href="https://github.com/notsnowden" target="_blank">GITHUB</a></li>
+                    <li><a href="https://t.me/notsnowden" target="_blank">TELEGRAM</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <h1>My self hosted cloud solution</h1>
+
+                <blockquote>
+                    <p>There is no Cloud, just other people’s computers.</p>
+                    <cite>Free Software Foudation</cite>
+                </blockquote>
+                 
+                <p>
+                    I know, I know. The Cloud isn’t technically <i>just</i> other people’s computers.
+                    Like all slogans, this one also fails to describe reality accurately. But think 
+                    about this for a second: is it really the goal of a slogan to be accurate? Of 
+                    course it’s not. This catchphrase is nothing more than a gross 
+                    representation of the situation we are experiencing today.
+                </p>
+                 
+                <p>
+                    Everyone who knows me a little bit knows that as far as privacy is
+                    concerned, I tend not to trust companies. Or rather, I try to trust them the 
+                    least possible.
+                </p>
+                
+                <div class="flex-wrapper">
+                    <p>
+                        So yeah, that’s basically the reason why I
+                        decided to bring back to life my ten-years-old 
+                        rusty Acer Aspire 5538, with an AMD Athlon X2 
+                        Dual L310, to setup my self-hosted Nextcloud 
+                        instance. (And some other projects of mine, but 
+                        I’ll talk about them in future articles.)
+                    </p>
+                    <img decoding="async" src="../media/nc.png"/>    
+                </div>
+                
+                <p>
+                    Stop right there, I know what you’re all thinking. I’m by no means an 
+                    expert of the matter. I’m just a free-software enthusiast, who likes to try 
+                    his hand in these stuff. As I said in my <u><a href="welcome.html" target="_blank">Welcome</a></u> article, I’m mainly self-taught. 
+                    <strong>This is not a guide</strong>. Take this article as a documentation of my 
+                    experience, with some personal opinions in it.<br>
+                    Without further ado, let’s get started!
+                </p>
+                
+                <h1 class="paragraph-title">The Operating System</h1>
+                
+                <p>
+                    The first step will obviously be to choose an operating system for our 
+                    computer. If you’re a beginner, my best suggestion is to install the 
+                    <u><a href="https://ubuntu.com/download/server" target="_blank">latest release of Ubuntu Server</a></u>.
+                </p>
+                
+                <p>
+                    Starting with Ubuntu 20.04 LTS, the server edition of Ubuntu is no longer 
+                    available for 32-bit architectures. However, previous releases of Ubuntu Server 
+                    were available for 32-bit hardware. So, if you have 32-bit hardware, you may be 
+                    able to use an older release, such as Ubuntu Server 18.04 LTS, which was the last 
+                    long-term support release to support 32-bit architecture. However, keep in mind 
+                    that running an older version of Ubuntu Server may come with security risks, as 
+                    older releases may not receive security updates and patches.
+                </p>  
+                
+                <p>
+                    You can argue that there are more minimal solutions, such as <u><a rel="noreferrer noopener" href="https://alpinelinux.org/" target="_blank">Alpine Linux</a></u>, 
+                    but in my opinion, if you’re just getting started with Linux, Alpine is a little bit overwhelming. 
+                    Ubuntu Server provides a user-friendly TUI installation, and a lot of tools installed out of the box. 
+                    Also, the community support for Ubuntu Server is huge. Its only flaw is that it’s kinda bloated, 
+                    as it eats about 400MiB of RAM in idle.</p>
+                
+                <h1 class="paragraph-title">The Web Server and The Database Engine</h1>
+                
+                <div class="flex-wrapper">
+                    <img decoding="async" src="../media/apache-nginx.jpg" width="90%"/>
+                </div>
+                <p>
+                    Here is where I have some regrets. Ubuntu Server comes with apache2 pre-installed, 
+                    so I decided to use it without asking questions. Right now I’m thinking about switching 
+                    to NGINX, since it has better performance and it’s easier to configure.
+                </p>
+                
+                <p>
+                    Yeah, Apache is more popular and it may have slightly better community support, but I 
+                    can’t stand how it handles the configuration of virtual hosts.
+                    My suggestion right now is to take a little more time and configure NGINX.
+                </p>
+
+                <p>
+                    Now we have to talk about the Database engine, which is used to store and manage 
+                    the application data, including user accounts, files, calendars, contacts, and more. 
+                    The database engine is responsible for ensuring that the data is stored securely, and 
+                    that it can be retrieved quickly and efficiently when needed.
+                </p>
+
+                <p>
+                    It’s obviously an important choice. As far as I know, Nextcloud supports MySQL/MariaDB, 
+                    PostGreSQL, SQLite and Oracle. Of these options, MySQL or MariaDB are the most commonly 
+                    used and recommended database engines for Nextcloud. PostgreSQL is also a popular choice 
+                    for users who prefer an open-source alternative to MySQL, however it may require more setup 
+                    and configuration when used with Nextcloud. Furthermore, not all Nextcloud apps and features 
+                    may be fully compatible with PostgreSQL. SQLite is a lightweight database engine that is included 
+                    with Nextcloud that can be used for small scale deployments, but it is not recommended for larger 
+                    deployments or installations with many users. Oracle is another option, but it is less commonly 
+                    used with Nextcloud.
+                </p>
+
+                <p>
+                    My recommendation here is to just stick with MySQL or MariaDB. You will find many great 
+                    guides that use one of these, and I assure you that they work flawlessly with Nextcloud.
+                </p>
+
+                <h1 class="paragraph-title">Conclusions</h1>
+
+                <p>
+                    That’s pretty much everything I had to say. If I could go back, I would have 
+                    liked to have some directions like these, so I hope someone will find this useful.
+                    If you want a step-by-step guide on how to install Nextcloud on your server there is the 
+                    <u><a href="https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation.html" target="_blank">official documentation</a></u>, or <u><a href="https://www.linode.com/docs/guides/how-to-install-nextcloud-on-ubuntu-22-04/" target="_blank">this amazing guide</a></u> 
+                    by Linode. The latter uses Apache as web server, but it’s very detailed and interesting.
+                </p>
+
+                <hr>
+                <h3>NEXT ARTICLE ></h3><br>
+                <a href="welcome.html">
+                    <h2>Welcome!</h2>
+                </a>
+            </article>
+        </main>
+
+        <footer>Made with ❤️ by me</footer>        
+    </body>
+</html>

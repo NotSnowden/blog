@@ -1,0 +1,43 @@
+article { background-color: black; }
+
+article h1 {
+    text-align: center;
+    cursor: text;
+    margin-bottom: 100px;
+}
+
+article p { color: whitesmoke; }
+
+@media screen and (max-width: 850px) {
+    article { width: 85%; }            
+}
+
+@media screen and (min-width: 851px) {
+    .flex-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+article .paragraph-title {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.flex-wrapper img { margin-left: 20px; }
+
+hr { margin: 100px 0 100px 0; }
+
+a h2 {
+    transition: all 0.3s ease-in-out;
+    margin-top: -20px;
+}
+
+a h2:hover { color: #ff6387; }
+
+.flex-wrapper .banner {
+    width: 250px;
+    margin-left: 20px;
+}

@@ -41,3 +41,19 @@ a h2:hover { color: #ff6387; }
     width: 250px;
     margin-left: 20px;
 }
+
+blockquote {
+    padding-left: 15px;
+    border-left: 7px solid #ccc;
+    margin-bottom: 30px;
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+}
+
+blockquote p {
+    display: inline;
+}

@@ -10,7 +10,7 @@
     .title-wrapper { display: block; }
 
     /*ul sticks to the left TODO: find a prettier way to do this lol*/
-    .navbar ul { margin-left: -60px; }
+    .navbar ul { justify-content: center; padding: 0; }
 
     article { width: 70%; }
 }
@@ -26,7 +26,7 @@
         align-items: center;
     }
 
-    .navbar ul { justify-content: center; }
+    .navbar ul { justify-content: center; padding: 0; }
 
     article { width: 70%; }
 }

@@ -9,7 +9,6 @@
     /*title and slogan go under the logo*/
     .title-wrapper { display: block; }
 
-    /*ul sticks to the left TODO: find a prettier way to do this lol*/
     .navbar ul { justify-content: center; padding: 0; }
 
     article { width: 70%; }

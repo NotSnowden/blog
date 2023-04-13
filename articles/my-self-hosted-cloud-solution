@@ -146,7 +146,7 @@
                     That’s pretty much everything I had to say. If I could go back, I would have 
                     liked to have some directions like these, so I hope someone will find this useful.
                     If you want a step-by-step guide on how to install Nextcloud on your server there is the 
-                    <u><a href="https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation" target="_blank">official documentation</a></u>, or <u><a href="https://www.linode.com/docs/guides/how-to-install-nextcloud-on-ubuntu-22-04/" target="_blank">this amazing guide</a></u> 
+                    <u><a href="https://docs.nextcloud.com/server/latest/admin_manual/installation" target="_blank">official documentation</a></u>, or <u><a href="https://www.linode.com/docs/guides/how-to-install-nextcloud-on-ubuntu-22-04/" target="_blank">this amazing guide</a></u> 
                     by Linode. The latter uses Apache as web server, but it’s very detailed and interesting.
                 </p>
 

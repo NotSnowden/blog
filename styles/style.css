@@ -1,5 +1,5 @@
 /*smartphone vertical view*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 551px) {
     /*the ul goes under the page title*/
     .navbar {
         display: block;
@@ -14,7 +14,7 @@
     article { width: 70%; }
 }
 
-@media screen and (min-width: 451px) and (max-width: 955px) {
+@media screen and (min-width: 552px) and (max-width: 955px) {
     .navbar {
         display: block;
         width: 90%;

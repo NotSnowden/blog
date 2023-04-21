@@ -1,5 +1,3 @@
-# my site config file backup \(^o^)/
-
 server {
         root /var/www/html/portfolio;
         index index.html index.php;
@@ -14,8 +12,7 @@ server {
 	default_type text/html;
 
 	# custom error pages
-	error_page 403 /error-pages/403.html;
-	error_page 404 /error-pages/404.html;
+	include snippets/error_pages.conf;
 
 	listen 443 ssl; # managed by Certbot
 	ssl_certificate /etc/letsencrypt/live/mattiavezzola.me/fullchain.pem; # managed by Certbot

@@ -1,0 +1,41 @@
+# my site config file backup \(^o^)/
+
+server {
+        root /var/www/html/portfolio;
+        index index.html index.php;
+
+        server_name mattiavezzola.me www.mattiavezzola.me;
+	
+	location / {
+                try_files $uri $uri/ =404;
+        }
+
+	# files with no extension default to html
+	default_type text/html;
+
+	# custom error pages
+	error_page 403 /error-pages/403.html;
+	error_page 404 /error-pages/404.html;
+
+	listen 443 ssl; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/mattiavezzola.me/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/mattiavezzola.me/privkey.pem; # managed by Certbot
+	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    if ($host = www.mattiavezzola.me) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = mattiavezzola.me) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    server_name mattiavezzola.me www.mattiavezzola.me;
+    listen 80;
+    return 404; # managed by Certbot
+}
+

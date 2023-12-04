@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Mattia Vezzola</title>
-        <link rel="icon" type="image/x-icon" href="../media/logo.png">
+        <link rel="icon" type="image/x-icon" href="../media/favicon.png">
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/articles_style.css">
     </head>
@@ -14,7 +14,7 @@
         <header>
             <div class="navbar">
                 <div class="title-wrapper">
-                    <img class="logo" src="../media/logo.png">
+                    <img class="logo" src="../media/favicon.png">
                     <div class="text">
                         <h1><a href="../">MATTIA VEZZOLA</a></h1><br>
                         <p>Sysadmin wannabe and GNU/Linux enthusiast</p>
@@ -36,7 +36,7 @@
 
                 <div class="flex-wrapper">
                     <p>
-                        Welcome to my portfolio! My name is Mattia Vezzola, I’m 18 years old and I’m an italian self-taught (ish) developer and system admin wannabe.
+                        Welcome to my blog! My name is Mattia Vezzola, I’m 18 years old and I’m an italian self-taught (ish) developer and system admin wannabe.
                         I’ve been interested in computer science since I was a kid, in fact I started studying Python when I was around 12 years old.
                         I still remember my first project: a clone of a famous mobile game, Flappy Bird, which I coded using <u><a rel="noreferrer noopener" href="https://www.pygame.org/" target="_blank">Pygame</a></u>.
                         I attended a computer science high school where I learned the basics of C, Java, SQL, and some front-end with, CSS and JS.

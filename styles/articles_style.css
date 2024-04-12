@@ -38,8 +38,7 @@ a h2 {
 a h2:hover { color: #ff6387; }
 
 .flex-wrapper .banner {
-    width: 250px;
-    margin-left: 20px;
+    height: 300px;
 }
 
 blockquote {

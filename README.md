@@ -1,4 +1,4 @@
 # Blog
-My blog, aka the place where I document my experiments as a newbie sysadmin and other stuff \
-Maybe one day I'll make it more dynamic, but right now it's not in my plans to throw js junk of any kind in it \
+Welcome to my blog, the digital diary where I spill the beans on my newbie sysadmin adventures and ponder over other juicy topics. \ 
+Perhaps someday I'll jazz it up a bit, but I've opted to steer clear of filling it with any JavaScript fluff — for now, at least.
 Custom error pages are from [here](https://github.com/denysvitali/nginx-error-pages).
